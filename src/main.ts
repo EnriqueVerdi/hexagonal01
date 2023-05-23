@@ -1,12 +1,11 @@
 import express from "express";
-require ("dotenv").config();
 
-import { userRouter } from "./user/infrastructure/routes/UserRouter";
+import { mallRouter  } from "./mall/infrastructure/MallRouter";
 
 const app = express();
 
-app.use("/users", userRouter);
+app.use("/malls", mallRouter);
 
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
   console.log(`[Application] Server online in port 3000`);
 });
